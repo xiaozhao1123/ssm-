@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--设置分页合理化，使分页<0,变成第一页，使超过总页数变成最后一页-->
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+    <!--sql mappper(sql的映射文件)的位置-->
+    <mappers>
+        <package name="com.zhao.dao"/>
+    </mappers>
+</configuration>
